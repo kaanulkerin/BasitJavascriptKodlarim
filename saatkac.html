@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kaan Ülker </title>
+	<style type="text/css">
+		body {
+			background-color: #ffffff;
+		}
+	</style>
+	
+</head>
+<body>
+
+
+<script>
+  var gun,ay,yil,saat,tarih,dakika,saniye,adim;
+tarih= new Date;
+gun= tarih.getDay();
+ay = tarih.getMonth();
+yil = tarih.getFullYear();
+saat = tarih.getHours();
+saniye = tarih.getSeconds();
+dakika= tarih.getMinutes();
+
+document.write(gun+"/"); 
+document.write(ay+"/"); 
+document.write(yil); 
+document.write("--"+saat);
+document.write("."+dakika); 
+document.write("."+saniye); 
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kaan Ülker </title>
+    <style type="text/css">
+        body {
+            background-color: #ffffff;
+        }
+        #tahmin{
+            border: 3px solid #c04949;
+            border-radius: 2px;
+        }
+    </style>
+
+</head>
+<body>
+<p>0-10 Arasında sayı tahmin et</p>
+<input type="text" id="tahmin" placeholder="Tahminini Yaz!">
+<input type="button" value="Tahmin Et!" onclick="Call();">
+<p id="tahminhakki"></p>
+
+
+<script>
+    window.onload= yeni();
+    function yeni(){alert("Sayı sıfırlandı");}
+var kac =0;
+var sayi = Math.floor(Math.random()*11);
+console.log(sayi);
+
+function Call(){
+
+var tahmin = document.getElementById("tahmin").value;
+if (tahmin>sayi){
+    var hak = (4-kac);
+    console.log("hakkı"+hak);
+    alert("Tahmini düşür");
+    if(kac==4){window.location.reload();}
+    
+    document.getElementById("tahminhakki").innerHTML=hak+" hakkınız kaldı";
+ kac++;
+}
+else if(tahmin<sayi){
+    var hak = (4-kac);
+    alert("Tahmini yükselt");
+    document.getElementById("tahminhakki").innerHTML=hak+" hakkınız kaldı";
+    if(kac==4){window.location.reload();}
+    kac++;
+}
+else if(tahmin==sayi){
+    alert("HELALL-sayfayı yeniliyorum oyuna devam...");
+    window.location.reload();
+}
+else {
+    alert("noluo aq");
+}
+
+}
+
+
+
+</script>
+
+</body>

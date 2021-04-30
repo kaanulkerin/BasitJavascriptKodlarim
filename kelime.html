@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kaan Ülker </title>
+	<style type="text/css">
+		body {
+			background-color: #ffffff;
+		}
+	</style>
+	
+</head>
+<body>
+   <input type="text" id="kelime" placeholder="Metini Yazınız!" style="height: 100px; width: 200px;"><br>
+   <input type="text" id="aranan" placeholder="Aradığınız Kelime?">
+   <input type="button" value="Ara" onclick="bul();"><br>
+   <p id="burayayaz"></p>
+   <br>
+   Bir metin yazın ve içinde kaç tane aradığınız kelimeden olduğunu öğrenin :)
+    <script>
+
+function bul(){
+  // document.write(document.getElementById("kelime").value);
+
+var paragrafString = document.getElementById("kelime").value;   
+var aga = paragrafString.toLowerCase(); 
+var paragrafArray = aga.split(' '); 
+
+//function dongu(oy){
+  //  return oy ="kaan";
+//}   
+
+var naber = document.getElementById("aranan").value;
+var naber2 = naber.toLowerCase();
+function kontrol(hop) {
+  return hop == naber2;
+}
+
+var sonuc =paragrafArray.filter(kontrol);
+
+
+document.getElementById("burayayaz").innerHTML="paragrafta "+sonuc.length+" adet "+ naber + " var";
+}
+
+
+        </script>
+</body>
+
+

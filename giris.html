@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kaan Ülker </title>
+	<style type="text/css">
+		body {
+			background-color: #ffffff;
+		}
+	</style>
+	
+</head>
+<body>
+
+<input type="text" placeholder="kullanıcı adı" id="kadi"><br>
+<input type="password" placeholder="şifre" id="sifre"><br>
+<input type="button" value="Giriş" onClick=giris();>
+<script>
+   
+   function giris ()
+   {
+    if ( document.getElementById("kadi").value == "kaan" )
+    {
+      if (document.getElementById("sifre").value == "123")
+      {
+        alert("hoşgeldin.");
+        document.body.style.backgroundColor = 'green'
+
+      }else
+      {alert("ŞİFRE YANLIŞ AGAA");
+      document.body.style.backgroundColor = 'red'
+      }
+
+
+    }else
+    {
+        alert("Kullanıcı adı yanlış beyfendi");
+        document.body.style.backgroundColor = 'red'
+    }
+    
+
+
+
+   }
+  
+
+
+
+  
+
+</script>
+(id kaan şifre 123)
+</body>
+
+
